@@ -1,0 +1,32 @@
+{
+  "name": "u-scholar-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/main.js",
+    "dev": "npm run build && npm start",
+    "test": "npm run build && node --test test/*.test.js",
+    "format": "prettier --write src test",
+    "lint": "prettier --check src test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "express-rate-limit": "^8.0.0",
+    "helmet": "^8.0.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.7.0"
+  }
+}
